@@ -1,11 +1,17 @@
 package io.spingbootquickstart.topics;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class topics {
+    @Id
     private String id;
     private String name;
     private String description;
 
     public topics() {
+
 
     }
 

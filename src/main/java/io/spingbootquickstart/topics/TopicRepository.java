@@ -1,4 +1,7 @@
 package io.spingbootquickstart.topics;
 
-public interface TopicRepository {
+import org.springframework.data.repository.CrudRepository;
+
+public interface TopicRepository extends CrudRepository<topics, String> {
+
 }
