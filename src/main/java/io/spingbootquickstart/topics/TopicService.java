@@ -4,7 +4,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -21,24 +20,24 @@ public class TopicService {
 //            new topics("5", "Test5", "Yes this is indeed the fifth test")
 //    ));
 
-    public List<topics> getAllTopics() {
+    public List<Topics> getAllTopics() {
 //        return topics;
-        List<topics> topicItem = new ArrayList<>();
+        List<Topics> topicItem = new ArrayList<>();
         topicRepository.findAll().forEach(topicItem::add);
         return topicItem;
     }
 
-    public topics getTopic(String id) {
+    public Topics getTopic(String id) {
 //        return topics.stream().filter(t -> t.getId().equals(id)).findFirst().get();
         return topicRepository.findById(id).orElse(null);
     }
 
-    public void addTopic(topics topic) {
+    public void addTopic(Topics topic) {
         topicRepository.save(topic);
     }
 
 //    use the same method as the add topic(save) to update. Save
-    public void updateTopic(topics topic) {
+    public void updateTopic(Topics topic) {
 //        for (int i = 0; i < topics.size(); i++) {
 //            topics t = topics.get(i);
 //            if(t.getId().equals(id))

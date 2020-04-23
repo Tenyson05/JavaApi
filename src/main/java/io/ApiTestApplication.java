@@ -1,15 +1,10 @@
-package io.spingbootquickstart.topics;
+package io;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
-
-//@EnableJpaRepositories(basePackages = "io.spingbootquickstart.topics")
-//@SpringBootApplication(scanBasePackages={
-//        "io.sprinbootquickstart.hello", "io.spingbootquickstart.topics"})
-
-//@ComponentScan("io.spingbootquickstart.topics")
+@ComponentScan({"io.springbootquickstart.courseAPI", "io.spingbootquickstart.topics"})
 @SpringBootApplication
 public class ApiTestApplication {
 

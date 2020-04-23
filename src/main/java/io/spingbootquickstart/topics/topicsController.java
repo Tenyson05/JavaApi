@@ -1,5 +1,4 @@
 package io.spingbootquickstart.topics;
-import java.util.Arrays;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,23 +11,23 @@ public class topicsController {
     private TopicService topicservice;
 
     @RequestMapping("/topics")
-    public List<topics> getAllTopics() {
+    public List<Topics> getAllTopics() {
         return topicservice.getAllTopics();
     }
 
     @RequestMapping( "/topics/{id}")
-    public topics getTopic(@PathVariable String id) {
+    public Topics getTopic(@PathVariable String id) {
         return topicservice.getTopic(id);
     }
 
     @RequestMapping(method = RequestMethod.POST, value="/topics")
-    public void addTopic(@RequestBody topics topic) {
+    public void addTopic(@RequestBody Topics topic) {
         topicservice.addTopic(topic);
 
     }
 
     @RequestMapping(method = RequestMethod.PUT, value="/topics/{id}")
-    public void updateTopic(@RequestBody topics topic, @PathVariable String id) {
+    public void updateTopic(@RequestBody Topics topic, @PathVariable String id) {
         topicservice.updateTopic(topic);
 
     }
