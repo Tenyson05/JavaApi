@@ -28,7 +28,10 @@ public class courseService {
     public void updateCourse(Course course) {
         courseRepository.save(course);
     }
+
     public void deleteCourse(String id) {
+        System.out.println(id);
         courseRepository.deleteById(id);
+
     }
 }
